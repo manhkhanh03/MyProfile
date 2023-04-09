@@ -64,7 +64,7 @@
         </div>
         <div class="box-if-ip">
             <p>Phone</p>
-            <input type="number" name="phone" id="phone" placeholder="Phone">
+            <input type="text" name="phone" id="phone" placeholder="Phone">
         </div>
     </div>
 

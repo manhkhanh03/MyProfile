@@ -29,7 +29,7 @@ Route::get('/', function () {
 });
 
 Route::get('profile/get', function() {
-    $query = DB::select('SELECT * FROM profile');
+    $query = DB::select('select * from profile');
     return $query;
 });
 
@@ -46,3 +46,7 @@ Route::get('profile/delete/{id}', function ($id) {
     DB::delete('DELETE FROM profile WHERE ID = ?', [$id]);
     return 'Successfully';
 });
+
+Route::get('profile/home', 'QueryDatabaseProject@showHome');
+Route::get('profile/home/{child}', 'QueryDatabaseProject@showHomeChild');
+Route::get('profile/home/{child}/{id?}/{name?}/{address?}/{phone?}', 'QueryDatabaseProject@showHomeChildProfile');

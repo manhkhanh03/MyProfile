@@ -1,7 +1,6 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 let table = $('#table-info');
-let btnEdit;
 
 function getData() {
     fetch('http://127.0.0.1:8000/profile/get')
@@ -32,11 +31,8 @@ function getData() {
         })
 }
 
-// import handleEdit  from "./edit.js";
-export default getData;
 function start() {
     getData();
-    // handleEdit();
 }
 
 start();

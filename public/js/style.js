@@ -9,13 +9,13 @@ function getData() {
             const htmls = profileData.map(element => {
                 return `
                 <tr>
-                    <td>${element.ID}</td>
-                    <td>${element.Name}</td>
-                    <td>${element.Address}</td>
-                    <td>${element.Phone}</td>
-                    <td class="edit-delete"><a style="flex: 0.8;" href="home/edit/${element.ID}/${element.Name}/${element.Address}/${element.Phone}">
+                    <td>${element.id}</td>
+                    <td>${element.name}</td>
+                    <td>${element.address}</td>
+                    <td>${element.phone}</td>
+                    <td class="edit-delete"><a style="flex: 0.8;" href="home/edit/${element.id}/${element.name}/${element.address}/${element.phone}">
                         <button class="edit" style="background-color: #ffc80a;">Edit</button></a>
-                        <a style="flex: 1;" href="home/delete/${element.ID}/${element.Name}/${element.Address}/${element.Phone}">
+                        <a style="flex: 1;" href="home/delete/${element.id}/${element.name}/${element.address}/${element.phone}">
                             <button class="delete"  style="background-color: #d83b01; ">Delete</button></a>
                     </td> 
                 </tr>

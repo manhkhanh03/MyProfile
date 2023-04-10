@@ -29,21 +29,21 @@ Route::get('/', function () {
 });
 
 Route::get('profile/get', function() {
-    $query = DB::select('select * from profile');
+    $query = DB::select('SELECT * FROM myprofile');
     return $query;
 });
 
 Route::get('profile/add/{name}/{address}/{phone}', function($name, $address, $phone) {
-    DB::insert('INSERT INTO profile (Name, Address, Phone) values (?, ?, ?)', [$name, $address, $phone]);
+    DB::insert('INSERT INTO myprofile (name, address, phone) VALUES (?, ?, ?)', [$name, $address, $phone]);
     return redirect('profile/home');
 });
 
 Route::get('profile/edit/{id}/{name}/{address}/{phone}', function($id, $name, $address, $phone) {
-    DB::update('UPDATE profile set Name = ?, Address = ?, Phone = ? where ID = ?', [$name, $address, $phone, $id]);
+    DB::update('UPDATE myprofile SET name = ?, address = ?, phone = ? where id = ?', [$name, $address, $phone, $id]);
 });
 
 Route::get('profile/delete/{id}', function ($id) {
-    DB::delete('DELETE FROM profile WHERE ID = ?', [$id]);
+    DB::delete('DELETE FROM myprofile WHERE id = ?', [$id]);
     return 'Successfully';
 });
 

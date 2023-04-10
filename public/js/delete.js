@@ -1,5 +1,4 @@
 const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
 
 function handleDelete() {
     const btnDelete = $('#delete');
@@ -9,6 +8,7 @@ function handleDelete() {
             .catch((error) => {
                 console.log('Error:', error)
             })
+        window.location.href = 'http://127.0.0.1:8000/profile/home';
     }
 }
 

@@ -1,5 +1,4 @@
 const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
 let table = $('#table-info');
 
 function getData() {
@@ -19,7 +18,7 @@ function getData() {
                             <button class="delete"  style="background-color: #d83b01; ">Delete</button></a>
                     </td> 
                 </tr>
-            `
+            `;
             })
 
             table.innerHTML = '<tr> ' +

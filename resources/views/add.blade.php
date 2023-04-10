@@ -69,9 +69,9 @@
     </div>
 
     <a href="{{ url('profile/home') }}"><button id="cancel" style="background-color: #616161;">Cancel</button></a>
-    <a href="{{ url('profile/home') }}"><button id="add" style="background-color: #107c10;">Add</button></a>
+    <button id="add" style="background-color: #107c10;">Add</button>
     
-    <script src="{{ url('js/add.js') }}"></script>
+    <script type="module" src="{{ url('js/add.js') }}"></script>
 </body>
 
 </html>

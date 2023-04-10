@@ -69,7 +69,7 @@
     </div>
 
     <a href="{{ url('profile/home') }}"><button id="cancel" style="background-color: #616161;">Cancel</button></a>
-    <a href="{{ url('profile/home') }}"><button id="delete" style="background-color: #d83b01;">Delete</button></a>
+    <button id="delete" style="background-color: #d83b01;">Delete</button>
     <script src="{{url('js/delete.js')}}"></script>
 </body>
 

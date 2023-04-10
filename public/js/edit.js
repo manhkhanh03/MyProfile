@@ -1,6 +1,4 @@
-// import getData from "./style.js";
 const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
 
 function handleEdit() {
     const boxEdit = $('#box-edit')
@@ -13,10 +11,8 @@ function handleEdit() {
             .catch((error) => {
                 console.log('Error:', error)
             })
+        window.location.href = 'http://127.0.0.1:8000/profile/home';
     }
 }
 
 handleEdit();
-
-// module.export = handleEdit;
-// export default handleEdit();

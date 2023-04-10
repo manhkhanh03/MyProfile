@@ -68,7 +68,7 @@
         </div>
     </div>
     <a href="{{ url('profile/home') }}"><button id="cancel" style="background-color: #616161;">Cancel</button></a>
-    <a href="{{ url('profile/home') }}"><button id="edit" style="background-color: #ffc80a;">Edit</button></a>
+    <button id="edit" style="background-color: #ffc80a;">Edit</button>
     
     <script src="{{ url('js/edit.js') }}"></script>
 </body>

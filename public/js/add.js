@@ -7,7 +7,7 @@ function checkValueInput() {
     phone.onkeyup = (event) => {
         let value = event.key;
         if(event.target.value.length >= 10) {
-            if (Number(value) || value == 0 || value == '+' || value == '(' || value == ')' || value == '-' || value == 'Shift') {
+            if (Number(value) || value == 0 || "+()-".includes(value) || value == 'Shift') {
                 phone.style.border = '2px solid #39ff32';
                 myBool = true;
             }
@@ -32,6 +32,7 @@ function checkValueInput() {
         bool = myBool;
     }
 }
+
 
 function handleAdd() {
     const btnEdit = $('#add');

@@ -87,9 +87,11 @@
 <body>
     <h1>Table Manager</h1>
     {{-- <a href="{{ url('add') }}"> --}}
-    <a class="btnAdd" href="{{ url('profile/home/add') }}">
+    <div class="btnAdd">
+        <a class="" href="{{ url('profile/home/add') }}">
         <button id="btnAdd" style="background-color: #107c10;">Add</button>
     </a>
+    </div>
 
     <table id="table-info" style="width: 96%; margin-top: 30px;"></table>
     <script type="module" src="{{ url('js/style.js') }}"></script>

@@ -45,7 +45,7 @@ function handleAdd() {
                 .catch((error) => {
                     console.log('Error:', error);
                 })
-            window.location.href = '../../profile/home';
+                .then(() => window.location.href = '../../profile/home')
         }
     }
 }

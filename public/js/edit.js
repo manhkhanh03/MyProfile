@@ -8,10 +8,11 @@ function handleEdit() {
         const Address = $('input[name="address"]').value
         const Phone = $('input[name="phone"]').value
         fetch(`http://127.0.0.1:8000/profile/edit/${boxEdit.getAttribute('data-id')}/${Name}/${Address}/${Phone}`)
+            .then(() => window.location.href = 'http://127.0.0.1:8000/profile/home')
             .catch((error) => {
                 console.log('Error:', error)
             })
-        window.location.href = 'http://127.0.0.1:8000/profile/home';
+        
     }
 }
 

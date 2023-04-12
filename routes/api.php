@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Api get
+Route::get('profile', 'Api\ProfileController@index')->name('profile.index');
+Route::get('profile/{id}', 'Api\ProfileController@show')->name('profile.show');
+Route::post('profile', 'Api\ProfileController@store')->name('profile.store');
+Route::put('profile/{id}', 'Api\ProfileController@update')->name('profile.update');
+Route::delete('profile/{id}', 'Api\ProfileController@destroy')->name('profile.destroy');

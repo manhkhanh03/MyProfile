@@ -40,12 +40,25 @@ function handleAdd() {
         let name = $('input[name="name"]').value;
         let address = $('input[name="address"]').value;
         let phone = $('input[name="phone"]').value;
+        const data = {
+            name: name,
+            address: address,
+            phone: phone
+        }
+
+        const option = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data)
+        }
         if(bool) {
-            fetch(`http://127.0.0.1:8000/profile/add/${name}/${address}/${phone}`)
+            fetch(`http://127.0.0.1:8000/api/profile`, option)
+                .then(() => window.location.href = '../../profile/home')
                 .catch((error) => {
                     console.log('Error:', error);
                 })
-                .then(() => window.location.href = '../../profile/home')
         }
     }
 }

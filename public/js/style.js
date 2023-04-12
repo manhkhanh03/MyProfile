@@ -2,8 +2,8 @@ const $ = document.querySelector.bind(document);
 let table = $('#table-info');
 
 function getData() {
-    fetch('http://127.0.0.1:8000/profile/get')
-        .then(response => { return response.json() })
+    fetch('http://127.0.0.1:8000/api/profile')
+        .then(response => { return response.json()})
         .then(profileData => {
             const htmls = profileData.map(element => {
                 return `
@@ -18,7 +18,7 @@ function getData() {
                             <button class="delete"  style="background-color: #d83b01; ">Delete</button></a>
                     </td> 
                 </tr>
-            `;
+                `;
             })
 
             table.innerHTML = '<tr> ' +
